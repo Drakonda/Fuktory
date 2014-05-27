@@ -5,6 +5,7 @@
 #include "stdafx.h"
 #include <vector>
 using namespace std; 
+enum Classes {ID_B=0, ID_D, ID_C};
 Classes id;
 /// Class A
 class A
@@ -48,7 +49,7 @@ class D: public A
 };
 
 ///Perechislenie
-enum Classes {ID_B=0, ID_D, ID_C};
+
 A* getistance(Classes id)
 {
 	A* p;
@@ -74,17 +75,17 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	vector<A*> arr;
 	char n;
-	/*B b;
+	B b;
 	C c;
 	D d;
 	arr.push_back(&b);
 	arr.push_back(&c);
-	arr.push_back(&d);*/
-	for (int i=0; i<5; i++)
+	arr.push_back(&d);
+	/*for (int i=0; i<5; i++)
 	{cout<<"Enter data (B C or D)"<<endl;
 	cin>>n;
-	arr.push_back(A::getistance(n));
-	}
+	arr.push_back(A::getistance(id));
+	}*/
 	for (int i=0; i<3; i++)
 		arr[i]->print();
 	getch();
